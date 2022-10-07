@@ -6,5 +6,15 @@ pipeline {
                 sh 'node --version'
             }
         }
+         stage('Install') {
+            steps {
+                sh 'npm install'
+            }
+        }
+         stage('Unit test') {
+            steps {
+                sh 'npm run test'
+            }
+        }
     }
 }
